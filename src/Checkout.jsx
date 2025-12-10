@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { supabase } from "../src/lib/supabaseClient";
+import { useNavigate } from "react-router-dom";
 
 export default function Checkout() {
   const [loading, setLoading] = useState(false);
@@ -14,6 +15,8 @@ export default function Checkout() {
     postal_code: "",
   });
   const [cart, setCart] = useState([]);
+  const [orderPlaced, setOrderPlaced] = useState(false); // new state
+  const navigate = useNavigate();
 
   useEffect(() => {
     const c = JSON.parse(localStorage.getItem("cart") || "[]");
@@ -42,7 +45,7 @@ export default function Checkout() {
       delivery_fee,
       total,
       payment_method: paymentMethod,
-      created_at: new Date().toISOString(), // UTC timestamp
+      created_at: new Date().toISOString(),
     };
 
     const { error } = await supabase.from("orders").insert([order]);
@@ -53,7 +56,13 @@ export default function Checkout() {
     } else {
       setCart([]);
       localStorage.removeItem("cart");
-      setMessage({ type: "success", text: "Order placed successfully!" });
+      setMessage({ type: "success", text: "Thank you for your order!" });
+      setOrderPlaced(true);
+
+      // Navigate to home after 5 seconds
+      setTimeout(() => {
+        navigate("/");
+      }, 5000);
     }
 
     setLoading(false);
@@ -76,7 +85,7 @@ export default function Checkout() {
         )}
 
         {/* Cart Items */}
-        {cart.length > 0 && (
+        {!orderPlaced && cart.length > 0 && (
           <div className="mb-6">
             <h2 className="text-xl font-semibold text-amber-300 mb-2">Items in your cart:</h2>
             <ul className="space-y-2 max-h-60 overflow-y-auto">
@@ -93,89 +102,92 @@ export default function Checkout() {
           </div>
         )}
 
-        <form onSubmit={handleSubmit} className="space-y-4">
-          <input
-            className="w-full p-3 rounded bg-black/80 placeholder-amber-300 text-white border border-amber-500"
-            placeholder="Full Name"
-            required
-            onChange={(e) => setForm({ ...form, full_name: e.target.value })}
-          />
-          <input
-            type="email"
-            className="w-full p-3 rounded bg-black/80 placeholder-amber-300 text-white border border-amber-500"
-            placeholder="Email"
-            required
-            onChange={(e) => setForm({ ...form, email: e.target.value })}
-          />
-          <input
-            className="w-full p-3 rounded bg-black/80 placeholder-amber-300 text-white border border-amber-500"
-            placeholder="Phone"
-            required
-            onChange={(e) => setForm({ ...form, phone: e.target.value })}
-          />
-          <textarea
-            className="w-full p-3 rounded bg-black/80 placeholder-amber-300 text-white border border-amber-500"
-            placeholder="Address"
-            required
-            onChange={(e) => setForm({ ...form, address: e.target.value })}
-          />
-          <input
-            className="w-full p-3 rounded bg-black/80 placeholder-amber-300 text-white border border-amber-500"
-            placeholder="City"
-            required
-            onChange={(e) => setForm({ ...form, city: e.target.value })}
-          />
-          <input
-            className="w-full p-3 rounded bg-black/80 placeholder-amber-300 text-white border border-amber-500"
-            placeholder="Postal Code"
-            required
-            onChange={(e) => setForm({ ...form, postal_code: e.target.value })}
-          />
+        {/* Form */}
+        {!orderPlaced && (
+          <form onSubmit={handleSubmit} className="space-y-4">
+            <input
+              className="w-full p-3 rounded bg-black/80 placeholder-amber-300 text-white border border-amber-500"
+              placeholder="Full Name"
+              required
+              onChange={(e) => setForm({ ...form, full_name: e.target.value })}
+            />
+            <input
+              type="email"
+              className="w-full p-3 rounded bg-black/80 placeholder-amber-300 text-white border border-amber-500"
+              placeholder="Email"
+              required
+              onChange={(e) => setForm({ ...form, email: e.target.value })}
+            />
+            <input
+              className="w-full p-3 rounded bg-black/80 placeholder-amber-300 text-white border border-amber-500"
+              placeholder="Phone"
+              required
+              onChange={(e) => setForm({ ...form, phone: e.target.value })}
+            />
+            <textarea
+              className="w-full p-3 rounded bg-black/80 placeholder-amber-300 text-white border border-amber-500"
+              placeholder="Address"
+              required
+              onChange={(e) => setForm({ ...form, address: e.target.value })}
+            />
+            <input
+              className="w-full p-3 rounded bg-black/80 placeholder-amber-300 text-white border border-amber-500"
+              placeholder="City"
+              required
+              onChange={(e) => setForm({ ...form, city: e.target.value })}
+            />
+            <input
+              className="w-full p-3 rounded bg-black/80 placeholder-amber-300 text-white border border-amber-500"
+              placeholder="Postal Code"
+              required
+              onChange={(e) => setForm({ ...form, postal_code: e.target.value })}
+            />
 
-          {/* Payment Method */}
-          <div className="pt-4">
-            <p className="text-amber-300 font-medium mb-2">Select Payment Method:</p>
-            <label className="flex items-center gap-2">
-              <input
-                type="radio"
-                name="payment"
-                value="cod"
-                checked={paymentMethod === "cod"}
-                onChange={() => setPaymentMethod("cod")}
-              />
-              <span>Cash on Delivery</span>
-            </label>
-            <label className="flex items-center gap-2 mt-1">
-              <input
-                type="radio"
-                name="payment"
-                value="jazzcash"
-                checked={paymentMethod === "jazzcash"}
-                onChange={() => setPaymentMethod("jazzcash")}
-              />
-              <span>JazzCash</span>
-            </label>
-            {paymentMethod === "jazzcash" && (
-              <p className="text-amber-400 text-sm mt-1">
-                Please pay to <span className="font-bold">03002164090</span>. Delivery will not occur without payment.
-              </p>
-            )}
-          </div>
+            {/* Payment Method */}
+            <div className="pt-4">
+              <p className="text-amber-300 font-medium mb-2">Select Payment Method:</p>
+              <label className="flex items-center gap-2">
+                <input
+                  type="radio"
+                  name="payment"
+                  value="cod"
+                  checked={paymentMethod === "cod"}
+                  onChange={() => setPaymentMethod("cod")}
+                />
+                <span>Cash on Delivery</span>
+              </label>
+              <label className="flex items-center gap-2 mt-1">
+                <input
+                  type="radio"
+                  name="payment"
+                  value="jazzcash"
+                  checked={paymentMethod === "jazzcash"}
+                  onChange={() => setPaymentMethod("jazzcash")}
+                />
+                <span>JazzCash</span>
+              </label>
+              {paymentMethod === "jazzcash" && (
+                <p className="text-amber-400 text-sm mt-1">
+                  Please pay to <span className="font-bold">03002164090</span>. Delivery will not occur without payment.
+                </p>
+              )}
+            </div>
 
-          {/* Totals */}
-          <div className="border-t border-amber-500 pt-4 text-amber-200">
-            <p>Subtotal: Rs {subtotal}</p>
-            <p>Delivery Fee: Rs {delivery_fee}</p>
-            <p className="text-amber-300 mt-1 font-bold text-lg">Total: Rs {total}</p>
-          </div>
+            {/* Totals */}
+            <div className="border-t border-amber-500 pt-4 text-amber-200">
+              <p>Subtotal: Rs {subtotal}</p>
+              <p>Delivery Fee: Rs {delivery_fee}</p>
+              <p className="text-amber-300 mt-1 font-bold text-lg">Total: Rs {total}</p>
+            </div>
 
-          <button
-            disabled={loading}
-            className="w-full bg-amber-500 text-black font-bold p-3 rounded-lg mt-4 hover:brightness-105 transition"
-          >
-            {loading ? "Placing Order..." : "Place Order"}
-          </button>
-        </form>
+            <button
+              disabled={loading}
+              className="w-full bg-amber-500 text-black font-bold p-3 rounded-lg mt-4 hover:brightness-105 transition"
+            >
+              {loading ? "Placing Order..." : "Place Order"}
+            </button>
+          </form>
+        )}
       </div>
     </div>
   );
