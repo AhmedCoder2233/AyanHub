@@ -57,8 +57,15 @@ export default function ProductDetailsPage() {
   }, [slug]);
 
 const handleAddToCart = () => {
-  const cart = JSON.parse(localStorage.getItem("cart")) || [];
+  if (!session) {
+    setCartMessage("Please sign in to add items to your cart!");
+    setShowAuthPrompt(true); 
+    return;
+  }
 
+  setAddingToCart(true);
+
+  const cart = JSON.parse(localStorage.getItem("cart")) || [];
   const existing = cart.find((item) => item.id === product.id);
 
   if (existing) {
@@ -77,6 +84,7 @@ const handleAddToCart = () => {
 
   setCartMessage("Added to cart successfully! ✓");
   setTimeout(() => setCartMessage(""), 3000);
+  setAddingToCart(false);
 };
 
   if (loading) {
@@ -321,4 +329,5 @@ const handleAddToCart = () => {
       </AnimatePresence>
     </div>
   );
+
 }
