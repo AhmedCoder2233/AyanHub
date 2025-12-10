@@ -152,9 +152,6 @@ export default function WatchHeader() {
           {isMobileMenuOpen && (
             <motion.div initial={{ opacity: 0, height: 0 }} animate={{ opacity: 1, height: 'auto' }} exit={{ opacity: 0, height: 0 }} className="lg:hidden border-t border-amber-500/20 bg-black">
               <div className="max-w-7xl mx-auto px-4 sm:px-6 py-4 space-y-2">
-                <div className="mb-4 pb-4 border-b border-amber-500/20">
-                  <input type="text" placeholder="Search watches..." className="w-full pl-10 pr-4 py-2 bg-black/50 border border-amber-500/30 rounded-lg text-amber-100 placeholder-amber-200/40 focus:outline-none focus:border-amber-400" />
-                </div>
                 {navItems.map((item) => (
                   <button key={item.name} onClick={() => navigate(item.route)} className="block w-full text-left py-3 text-amber-100 hover:text-amber-400 transition-colors font-medium uppercase tracking-wide border-b border-amber-500/10 last:border-0">
                     {item.name}
@@ -196,3 +193,4 @@ export default function WatchHeader() {
     </>
   );
 }
+
