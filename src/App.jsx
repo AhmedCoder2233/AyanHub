@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { LoadingAnimation } from "./components/Animation";
 import WatchHeader from "./components/Header";
-import { HeroSection } from "./Hero";
+import HeroSection from "./Hero";
 import { AnimatePresence } from "framer-motion";
 import ProductsPage from "./TrendingProducts";
 import TestimonialsSection from "./Reviews";
