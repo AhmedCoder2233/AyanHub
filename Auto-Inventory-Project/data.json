@@ -1,0 +1,115 @@
+[
+  {
+    "name": "Wireless Mouse",
+    "description": "Ergonomic wireless mouse with long battery life.",
+    "price": 1200.0,
+    "price_without_discount": 1500.0,
+    "discount_percent": 20,
+    "in_stock": true,
+    "quantity": 50,
+    "category": "Electronics",
+    "image_url": "https://example.com/images/mouse.jpg"
+  },
+  {
+    "name": "Bluetooth Headphones",
+    "description": "Noise-cancelling over-ear headphones.",
+    "price": 3500.0,
+    "price_without_discount": 5000.0,
+    "discount_percent": 30,
+    "in_stock": true,
+    "quantity": 35,
+    "category": "Electronics",
+    "image_url": "https://example.com/images/headphones.jpg"
+  },
+  {
+    "name": "Gaming Keyboard",
+    "description": "Mechanical keyboard with RGB lights.",
+    "price": 2800.0,
+    "price_without_discount": 3500.0,
+    "discount_percent": 20,
+    "in_stock": true,
+    "quantity": 20,
+    "category": "Gaming",
+    "image_url": "https://example.com/images/keyboard.jpg"
+  },
+  {
+    "name": "Smartwatch",
+    "description": "Track fitness, heart rate and notifications.",
+    "price": 5500.0,
+    "price_without_discount": 7000.0,
+    "discount_percent": 21,
+    "in_stock": true,
+    "quantity": 25,
+    "category": "Wearables",
+    "image_url": "https://example.com/images/smartwatch.jpg"
+  },
+  {
+    "name": "LED Monitor 24\"",
+    "description": "Full HD LED monitor with HDMI support.",
+    "price": 11500.0,
+    "price_without_discount": 13000.0,
+    "discount_percent": 11,
+    "in_stock": true,
+    "quantity": 12,
+    "category": "Electronics",
+    "image_url": "https://example.com/images/monitor.jpg"
+  },
+  {
+    "name": "Portable SSD 1TB",
+    "description": "Fast external solid state drive.",
+    "price": 9500.0,
+    "price_without_discount": 10500.0,
+    "discount_percent": 10,
+    "in_stock": true,
+    "quantity": 40,
+    "category": "Storage",
+    "image_url": "https://example.com/images/ssd.jpg"
+  },
+  {
+    "name": "Office Chair",
+    "description": "Comfortable chair with lumbar support.",
+    "price": 7800.0,
+    "price_without_discount": 8800.0,
+    "discount_percent": 11,
+    "in_stock": true,
+    "quantity": 18,
+    "category": "Furniture",
+    "image_url": "https://example.com/images/chair.jpg"
+  },
+  {
+    
+    "name": "Laptop Stand",
+    "description": "Adjustable aluminum stand for laptops.",
+    "price": 1800.0,
+    "price_without_discount": 2200.0,
+    "discount_percent": 18,
+    "in_stock": true,
+    "quantity": 60,
+    "category": "Accessories",
+    "image_url": "https://example.com/images/stand.jpg"
+  },
+  {
+    
+    "name": "USB-C Hub",
+    "description": "Multiport hub with HDMI, USB and card reader.",
+    "price": 2500.0,
+    "price_without_discount": 3000.0,
+    "discount_percent": 17,
+    "in_stock": true,
+    "quantity": 33,
+    "category": "Accessories",
+    "image_url": "https://example.com/images/hub.jpg"
+  },
+  {
+    
+    "name": "Smart LED Bulb",
+    "description": "WiFi-enabled bulb with color control.",
+    "price": 900.0,
+    "price_without_discount": 1200.0,
+    "discount_percent": 25,
+    "in_stock": true,
+    "quantity": 100,
+    "category": "Home Automation",
+    "image_url": "https://example.com/images/bulb.jpg"
+  }
+]
