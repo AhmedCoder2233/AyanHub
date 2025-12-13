@@ -1,0 +1,62 @@
+[
+  {
+    "product_name": "iPhone 14 Pro",
+    "product_description": "Latest Apple smartphone with A16 chip and triple camera.",
+    "product_price": "999$",
+    "product_category": "Electronics"
+  },
+  {
+    "product_name": "Nike Air Max",
+    "product_description": "Comfortable and stylish running shoes.",
+    "product_price": "150$",
+    "product_category": "Footwear"
+  },
+  {
+    "product_name": "Samsung QLED TV",
+    "product_description": "55-inch 4K UHD Smart QLED TV with vibrant colors.",
+    "product_price": "699$",
+    "product_category": "Electronics"
+  },
+  {
+    "product_name": "Dell XPS 13",
+    "product_description": "High-performance ultrabook with Intel i7 processor.",
+    "product_price": "1199$",
+    "product_category": "Computers"
+  },
+  {
+    "product_name": "Adidas Hoodie",
+    "product_description": "Warm and cozy hoodie with premium material.",
+    "product_price": "75$",
+    "product_category": "Clothing"
+  },
+  {
+    "product_name": "Sony WH-1000XM5",
+    "product_description": "Noise-cancelling wireless headphones.",
+    "product_price": "349$",
+    "product_category": "Accessories"
+  },
+  {
+    "product_name": "Logitech MX Master 3S",
+    "product_description": "Advanced ergonomic mouse for productivity.",
+    "product_price": "99$",
+    "product_category": "Accessories"
+  },
+  {
+    "product_name": "Canon EOS R50",
+    "product_description": "Mirrorless camera with 24MP sensor and 4K video.",
+    "product_price": "879$",
+    "product_category": "Electronics"
+  },
+  {
+    "product_name": "Levi’s Jeans",
+    "product_description": "Classic slim-fit denim jeans.",
+    "product_price": "65$",
+    "product_category": "Clothing"
+  },
+  {
+    "product_name": "Apple Watch Series 9",
+    "product_description": "Smartwatch with health tracking and GPS.",
+    "product_price": "429$",
+    "product_category": "Electronics"
+  }
+]
