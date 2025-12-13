@@ -21,7 +21,7 @@
 
 **Purpose**: Project initialization and cloning the repository.
 
-- [ ] T001 Clone the OpenAI ChatKit Advanced Samples repository `git clone https://github.com/openai/openai-chatkit-advanced-samples.git`
+- [ ] T001 Clone the OpenAI ChatKit Advanced Samples repository `git clone https://github.com/openai/openai-chatkit-advanced-samples.git` (FAILED: Out of memory during clone operation. This is an environment issue that needs to be resolved manually.)
 - [ ] T002 Navigate to the `examples/customer-support/backend` directory `cd openai-chatkit-advanced-samples/examples/customer-support/backend`
 
 --- 
