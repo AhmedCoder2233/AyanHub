@@ -1,0 +1,15 @@
+[project]
+name = "a2aecommerce"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "a2a-sdk[http-server]>=0.3.6",
+    "fastapi[standard]>=0.116.2",
+    "fastmcp>=2.12.3",
+    "openai-agents>=0.3.1",
+    "psycopg2>=2.9.10",
+    "sqlalchemy>=2.0.43",
+    "uvicorn>=0.36.0",
+]
