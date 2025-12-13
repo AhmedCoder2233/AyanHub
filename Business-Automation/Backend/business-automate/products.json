@@ -1,0 +1,72 @@
+[
+  {
+    "name": "Apple iPhone 14 Pro Max",
+    "description": "6.7-inch display, A16 Bionic chip, 48MP camera, and Dynamic Island feature.",
+    "price": 134999,
+    "image_url": "https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/iphone-14-pro-max-finish-select-202209-6-1inch_GEO_EMEA?wid=5120&hei=2880&fmt=jpeg&qlt=80&.v=1663346028828",
+    "quantity": 5
+  },
+  {
+    "name": "Sony WH-1000XM5 Wireless Headphones",
+    "description": "Industry-leading noise canceling headphones with up to 30 hours battery life.",
+    "price": 39999,
+    "image_url": "https://m.media-amazon.com/images/I/51bRSWrEc0L._AC_SL1500_.jpg",
+    "quantity": 10
+  },
+  {
+    "name": "Dell XPS 13 Laptop",
+    "description": "13.4-inch FHD+, Intel i7, 16GB RAM, 512GB SSD, Windows 11.",
+    "price": 189999,
+    "image_url": "https://i.dell.com/sites/imagecontent/products/PublishingImages/xps-13-9310-laptop/spi/ng/xps-13-9310-laptop-white-gallery-1.jpg",
+    "quantity": 3
+  },
+  {
+    "name": "Canon EOS R6 Camera",
+    "description": "20MP full-frame sensor, 4K video, 20fps burst shooting, Dual Pixel CMOS AF II.",
+    "price": 249999,
+    "image_url": "https://static.bhphoto.com/images/images2500x2500/1603819645_1593186.jpg",
+    "quantity": 4
+  },
+  {
+    "name": "Samsung 55\" QLED 4K Smart TV",
+    "description": "Quantum Dot technology, 4K UHD, Alexa Built-in, Motion Rate 240.",
+    "price": 139999,
+    "image_url": "https://image.samsung.com/pk/smart-tv/qled/q60a/gallery/pk-qled-q60a-qn55q60aauxmm-530514869",
+    "quantity": 6
+  },
+  {
+    "name": "Apple Watch Series 9",
+    "description": "45mm Midnight Aluminum Case with Sport Band, GPS + Cellular.",
+    "price": 89999,
+    "image_url": "https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/MQTX3ref_VW_34FR+watch-case-45-alum-midnight-s9_VW_34FR_WF_CO?wid=4000&hei=4000&fmt=jpeg&qlt=80&.v=1693252554346",
+    "quantity": 7
+  },
+  {
+    "name": "PlayStation 5 Console",
+    "description": "Next-gen gaming console with 825GB SSD and DualSense controller.",
+    "price": 159999,
+    "image_url": "https://m.media-amazon.com/images/I/619BkvKW35L._SL1500_.jpg",
+    "quantity": 5
+  },
+  {
+    "name": "Logitech MX Master 3S Mouse",
+    "description": "Advanced wireless mouse with ultra-fast scrolling and ergonomic design.",
+    "price": 17999,
+    "image_url": "https://m.media-amazon.com/images/I/61A9pPpXoPL._AC_SL1500_.jpg",
+    "quantity": 8
+  },
+  {
+    "name": "Amazon Echo Dot (5th Gen)",
+    "description": "Smart speaker with Alexa, improved audio, and LED display.",
+    "price": 11999,
+    "image_url": "https://m.media-amazon.com/images/I/61u48FEs1oL._AC_SL1000_.jpg",
+    "quantity": 12
+  },
+  {
+    "name": "GoPro HERO12 Black",
+    "description": "5.3K60 video, waterproof, HyperSmooth 6.0, voice control, and GP-Log.",
+    "price": 124999,
+    "image_url": "https://gopro.com/content/dam/gopro/en/en/products/hero12-black/gallery/gopro-hero12-black-front.png",
+    "quantity": 6
+  }
+]

@@ -1,0 +1,120 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f4f4f9;
+}
+
+.dashboard-container {
+  display: flex;
+  height: 100vh;
+}
+
+.sidebar {
+  width: 220px;
+  background: linear-gradient(135deg, #2e3a59, #1d2439);
+  color: white;
+  padding: 20px;
+}
+
+.sidebar h2 {
+  margin-bottom: 20px;
+  font-size: 22px;
+  border-bottom: 1px solid #555;
+  padding-bottom: 10px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  padding: 10px 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.sidebar ul li:hover {
+  color: #a2d2ff;
+}
+
+.content {
+  flex: 1;
+  padding: 30px;
+  overflow-y: auto;
+}
+
+.section {
+  background-color: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.section h2 {
+  margin-bottom: 20px;
+}
+
+.section input,
+.section textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.section button {
+  padding: 10px 20px;
+  background: #1d2439;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.section button:hover {
+  background: #354164;
+}
+
+.purchased-list .purchased-item {
+  display: flex;
+  justify-content: space-between;
+  background: #f0f2f7;
+  padding: 12px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+}
+
+.status {
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 14px;
+  color: white;
+}
+
+.pending {
+  background-color: #f39c12;
+}
+
+.picked {
+  background-color: #3498db;
+}
+
+.delivered {
+  background-color: #27ae60;
+}
+
+.return-item {
+  padding: 10px;
+  background: #ffecec;
+  border: 1px solid #ffcccc;
+  margin-bottom: 10px;
+  border-radius: 6px;
+}
+
+.most-selling li {
+  margin-bottom: 10px;
+  font-weight: 500;
+}
