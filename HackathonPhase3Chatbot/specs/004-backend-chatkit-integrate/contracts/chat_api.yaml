@@ -1,0 +1,62 @@
+openapi: 3.0.0
+info:
+  title: Chat API
+  version: 1.0.0
+description: API for user chat interactions with the AI assistant.
+
+paths:
+  /api/{user_id}/chat:
+    post:
+      summary: Send a message to the AI assistant
+      parameters:
+        - in: path
+          name: user_id
+          schema:
+            type: string
+          required: true
+          description: Unique identifier of the user.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                conversation_id:
+                  type: integer
+                  format: int64
+                  description: Optional ID of an existing conversation. If not provided, a new conversation will be created.
+                  nullable: true
+                message:
+                  type: string
+                  description: The user's natural language message to the AI assistant.
+              required:
+                - message
+      responses:
+        '200':
+          description: AI assistant's response to the message.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  conversation_id:
+                    type: integer
+                    format: int64
+                    description: The ID of the conversation.
+                  response:
+                    type: string
+                    description: The AI assistant's response.
+                  tool_calls:
+                    type: array
+                    items:
+                      type: object # Further detail on tool_calls can be added as needed
+                    description: List of MCP tools invoked by the AI, if any.
+                required:
+                  - conversation_id
+                  - response
+                  - tool_calls
+        '400':
+          description: Invalid request payload or parameters.
+        '500':
+          description: Internal server error.
